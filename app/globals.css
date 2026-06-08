@@ -1,0 +1,210 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ *
+ * Design tokens — see DESIGN.md. OKLCH throughout.
+ * ------------------------------------------------------------------ */
+@theme {
+  --color-bg: oklch(1 0 0);
+  --color-surface: oklch(0.975 0.004 250);
+  --color-ink: oklch(0.24 0.024 255);
+  --color-muted: oklch(0.46 0.022 255);
+  --color-navy: oklch(0.3 0.062 255);
+  --color-navy-deep: oklch(0.205 0.05 258);
+  --color-navy-soft: oklch(0.4 0.06 252);
+  --color-on-navy: oklch(0.97 0.006 255);
+  --color-on-navy-muted: oklch(0.78 0.018 255);
+  --color-accent: oklch(0.8 0.115 78);
+  --color-accent-ink: oklch(0.46 0.1 75);
+  --color-line: oklch(0.91 0.006 255);
+
+  --font-sans: var(--font-hanken), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-spectral), ui-serif, Georgia, serif;
+
+  --radius-card: 12px;
+  --radius-panel: 20px;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+:root {
+  --line-navy: oklch(1 0 0 / 0.12);
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-modal: 400;
+  --z-toast: 600;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: clip;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+  margin: 0;
+}
+
+p {
+  text-wrap: pretty;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+::selection {
+  background: var(--color-navy);
+  color: var(--color-on-navy);
+}
+
+/* Visible keyboard focus, invisible to mouse users */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ------------------------------------------------------------------ *
+ * Layout helpers
+ * ------------------------------------------------------------------ */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 5vw, 2.5rem);
+}
+
+.section {
+  padding-block: clamp(4rem, 9vw, 8rem);
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent-ink);
+}
+
+/* ------------------------------------------------------------------ *
+ * Reusable interactive bits
+ * ------------------------------------------------------------------ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 0.85rem 1.5rem;
+  border: 1px solid transparent;
+  transition: transform 0.4s var(--ease-out-expo),
+    background-color 0.3s ease, box-shadow 0.4s var(--ease-out-expo),
+    color 0.3s ease;
+  will-change: transform;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-primary {
+  background: var(--color-navy);
+  color: var(--color-on-navy);
+  box-shadow: 0 1px 2px oklch(0.205 0.05 258 / 0.25);
+}
+
+.btn-primary:hover {
+  background: var(--color-navy-deep);
+  box-shadow: 0 12px 30px oklch(0.205 0.05 258 / 0.35);
+}
+
+.btn-ghost-light {
+  background: oklch(1 0 0 / 0.08);
+  color: var(--color-on-navy);
+  border-color: var(--line-navy);
+  backdrop-filter: blur(8px);
+}
+
+.btn-ghost-light:hover {
+  background: oklch(1 0 0 / 0.16);
+}
+
+/* ------------------------------------------------------------------ *
+ * Scroll-reveal primitive (enhances an already-visible default).
+ * Default state is fully visible; the "armed" class hides it only
+ * when JS has confirmed it can also reveal it again.
+ * ------------------------------------------------------------------ */
+[data-reveal] {
+  opacity: 1;
+  transform: none;
+}
+
+[data-reveal].reveal-armed {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+[data-reveal].reveal-in {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.8s var(--ease-out-expo),
+    transform 0.8s var(--ease-out-expo);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  [data-reveal],
+  [data-reveal].reveal-armed {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

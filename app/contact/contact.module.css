@@ -1,0 +1,110 @@
+.grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+
+.h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 1.75rem 0 0;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.list li {
+  display: flex;
+  gap: 1rem;
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  flex: none;
+  border-radius: 12px;
+  background: oklch(0.3 0.062 255 / 0.08);
+  color: var(--color-navy);
+}
+
+.list strong {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+}
+
+.list a:hover {
+  color: var(--color-navy);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.hours {
+  margin-top: 2rem;
+  padding: 1.4rem 1.5rem;
+  background: var(--color-surface);
+  border-radius: 14px;
+}
+
+.hours > strong {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.hoursRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.35rem 0;
+  font-weight: 500;
+}
+
+.mapBtn {
+  margin-top: 2rem;
+}
+
+.formCard {
+  background: var(--color-bg);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-panel);
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  box-shadow: 0 24px 60px oklch(0.2 0.05 258 / 0.08);
+}
+
+.formSub {
+  margin: 0.5rem 0 1.5rem;
+  color: var(--color-muted);
+}
+
+.mapWrap {
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+  border-radius: var(--radius-panel);
+  overflow: hidden;
+  border: 1px solid var(--color-line);
+  box-shadow: 0 24px 60px oklch(0.2 0.05 258 / 0.08);
+  line-height: 0;
+}
+
+.map {
+  display: block;
+  width: 100%;
+  height: clamp(320px, 45vw, 460px);
+  border: 0;
+}
+
+@media (max-width: 880px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

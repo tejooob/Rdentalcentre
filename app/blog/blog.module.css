@@ -1,0 +1,120 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.cardReveal {
+  display: flex;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: var(--color-bg);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-panel);
+  overflow: hidden;
+  transition: transform 0.5s var(--ease-out-expo),
+    box-shadow 0.5s var(--ease-out-expo), border-color 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: transparent;
+  box-shadow: 0 26px 55px oklch(0.2 0.05 258 / 0.14);
+}
+
+.media {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--color-navy-deep);
+}
+
+.img {
+  object-fit: cover;
+  transition: transform 0.8s var(--ease-out-expo);
+}
+
+.card:hover .img {
+  transform: scale(1.06);
+}
+
+.cat {
+  position: absolute;
+  top: 0.85rem;
+  left: 0.85rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-navy-deep);
+  background: oklch(1 0 0 / 0.92);
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.55rem;
+  padding: 1.4rem;
+}
+
+.meta {
+  font-size: 0.82rem;
+  color: var(--color-muted);
+}
+
+.title {
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
+
+.title a:hover {
+  color: var(--color-navy);
+}
+
+.excerpt {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--color-muted);
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: auto;
+  padding-top: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-navy);
+  transition: gap 0.3s var(--ease-out-expo);
+}
+
+.card:hover .link {
+  gap: 0.8rem;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card:hover .img {
+    transform: none;
+  }
+}

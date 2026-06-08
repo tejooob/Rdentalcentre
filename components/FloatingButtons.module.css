@@ -1,0 +1,87 @@
+.dock {
+  position: fixed;
+  right: clamp(0.85rem, 2vw, 1.5rem);
+  bottom: clamp(0.85rem, 2vw, 1.5rem);
+  z-index: var(--z-sticky);
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  opacity: 0;
+  transform: translateY(16px) scale(0.9);
+  pointer-events: none;
+  transition: opacity 0.4s var(--ease-out-expo),
+    transform 0.4s var(--ease-out-expo);
+}
+
+.show {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+
+.fab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  height: 52px;
+  width: 52px;
+  padding: 0;
+  border-radius: 999px;
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  box-shadow: 0 10px 28px oklch(0.2 0.05 258 / 0.28);
+  transition: width 0.4s var(--ease-out-expo),
+    transform 0.3s var(--ease-out-expo), box-shadow 0.3s ease;
+}
+
+.fab svg {
+  flex: none;
+  width: 52px;
+}
+
+.label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding-right: 1.1rem;
+}
+
+.whatsapp {
+  background: #25d366;
+}
+.call {
+  background: var(--color-navy);
+}
+.book {
+  background: var(--color-accent);
+  color: var(--color-navy-deep);
+}
+
+/* Expand to reveal label on hover/focus (pointer devices) */
+@media (hover: hover) {
+  .fab {
+    width: 52px;
+  }
+  .fab:hover,
+  .fab:focus-visible {
+    width: auto;
+    transform: translateX(-2px);
+  }
+}
+
+/* Touch devices: keep compact icon-only FABs */
+@media (hover: none) {
+  .label {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dock {
+    transition: opacity 0.2s ease;
+    transform: none;
+  }
+  .fab {
+    transition: none;
+  }
+}

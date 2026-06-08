@@ -1,0 +1,140 @@
+.header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: var(--z-sticky);
+  transition: background-color 0.4s var(--ease-out-expo),
+    box-shadow 0.4s var(--ease-out-expo), backdrop-filter 0.4s ease;
+}
+
+.solid {
+  background: oklch(1 0 0 / 0.82);
+  backdrop-filter: saturate(1.4) blur(14px);
+  box-shadow: 0 1px 0 var(--color-line), 0 10px 30px oklch(0.2 0.05 258 / 0.06);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  height: 72px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+}
+
+.logo {
+  width: auto;
+  height: 42px;
+  object-fit: contain;
+}
+
+@media (max-width: 480px) {
+  .logo {
+    height: 36px;
+  }
+}
+
+.nav {
+  display: flex;
+  gap: 1.4rem;
+  margin-left: auto;
+}
+
+.link {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--color-muted);
+  position: relative;
+  padding-block: 0.25rem;
+  transition: color 0.25s ease;
+}
+
+.active {
+  color: var(--color-ink);
+}
+
+.active::after {
+  width: 100%;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: var(--color-accent);
+  transition: width 0.35s var(--ease-out-expo);
+}
+
+.link:hover {
+  color: var(--color-ink);
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+.cta {
+  padding-block: 0.6rem;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 1px solid var(--color-line);
+  border-radius: 10px;
+  margin-left: auto;
+}
+
+.burger span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: var(--color-ink);
+  border-radius: 2px;
+  transition: transform 0.3s var(--ease-out-expo), opacity 0.3s ease;
+}
+
+.burger span[data-open="true"]:first-child {
+  transform: translateY(3.5px) rotate(45deg);
+}
+
+.burger span[data-open="true"]:last-child {
+  transform: translateY(-3.5px) rotate(-45deg);
+}
+
+.mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem clamp(1.25rem, 5vw, 2.5rem) 1.5rem;
+  background: oklch(1 0 0 / 0.95);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.mobileLink {
+  padding: 0.75rem 0.25rem;
+  font-weight: 500;
+  border-bottom: 1px solid var(--color-line);
+}
+
+@media (max-width: 1040px) {
+  .nav,
+  .cta {
+    display: none;
+  }
+  .burger {
+    display: flex;
+  }
+}

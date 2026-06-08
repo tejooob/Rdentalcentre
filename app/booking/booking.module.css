@@ -1,0 +1,127 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(2rem, 5vw, 3.5rem);
+  align-items: start;
+}
+
+.formCard {
+  background: var(--color-bg);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-panel);
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  box-shadow: 0 24px 60px oklch(0.2 0.05 258 / 0.08);
+}
+
+.h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.sub {
+  margin: 0.5rem 0 1.5rem;
+  color: var(--color-muted);
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.quick {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.quickTitle {
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+}
+
+.bigBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1rem 1.25rem;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.bigBtn:hover {
+  transform: translateY(-2px);
+}
+
+.wa {
+  background: #25d366;
+  color: #04331a;
+}
+
+.wa:hover {
+  box-shadow: 0 14px 30px oklch(0.6 0.16 150 / 0.3);
+}
+
+.call {
+  background: var(--color-navy);
+  color: var(--color-on-navy);
+}
+
+.call:hover {
+  background: var(--color-navy-deep);
+  box-shadow: 0 14px 30px oklch(0.2 0.05 258 / 0.3);
+}
+
+.reassure {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.reassure li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 500;
+  color: var(--color-ink);
+}
+
+.reassure svg {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  color: oklch(0.6 0.15 150);
+}
+
+.hours {
+  padding: 1.4rem 1.5rem;
+  background: var(--color-surface);
+  border-radius: 14px;
+}
+
+.hours > strong {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.hoursRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.35rem 0;
+  font-weight: 500;
+}
+
+@media (max-width: 880px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,99 @@
+.section {
+  background: var(--color-bg);
+}
+
+.head {
+  text-align: center;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  margin-top: 0.75rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 1.5rem;
+}
+
+.cardReveal {
+  display: flex;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  margin: 0;
+  padding: 2rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-panel);
+  overflow: hidden;
+  transition: transform 0.5s var(--ease-out-expo),
+    box-shadow 0.5s var(--ease-out-expo);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 50px oklch(0.2 0.05 258 / 0.12);
+}
+
+.quoteMark {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  color: var(--color-navy);
+  opacity: 0.1;
+  width: 56px;
+  height: 56px;
+}
+
+.stars {
+  display: inline-flex;
+  gap: 0.15rem;
+}
+
+.quote {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-ink);
+}
+
+.person {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--color-navy);
+  color: var(--color-on-navy);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.name {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.detail {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}

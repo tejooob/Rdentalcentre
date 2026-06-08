@@ -1,0 +1,60 @@
+.hero {
+  position: relative;
+  padding-top: clamp(7rem, 12vw, 9.5rem);
+  padding-bottom: clamp(2.5rem, 5vw, 3.5rem);
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-line);
+  overflow: clip;
+}
+
+.glow {
+  position: absolute;
+  z-index: 0;
+  top: -40%;
+  right: -8%;
+  width: min(60vw, 620px);
+  height: min(60vw, 620px);
+  border-radius: 50%;
+  background: radial-gradient(circle, oklch(0.3 0.062 255 / 0.08), transparent 62%);
+}
+
+/* Keep the glow out of flow; only lift the content container above it.
+   (A bare `.hero > div` rule would out-specify `.glow` and drop the glow
+   into normal flow, adding a ~620px empty block at the top.) */
+.hero :global(.container) {
+  position: relative;
+  z-index: 1;
+}
+
+.crumbs {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin-bottom: 1.25rem;
+}
+
+.crumbs a:hover {
+  color: var(--color-navy);
+}
+
+.eyebrow {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent-ink);
+  margin-bottom: 0.6rem;
+}
+
+.title {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  max-width: 18ch;
+}
+
+.subtitle {
+  margin-top: 1rem;
+  font-size: clamp(1rem, 1.4vw, 1.18rem);
+  color: var(--color-muted);
+  max-width: 60ch;
+}

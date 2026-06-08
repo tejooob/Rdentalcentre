@@ -1,0 +1,401 @@
+.hero {
+  position: relative;
+  padding-top: clamp(7rem, 12vw, 9.5rem);
+  padding-bottom: clamp(2.5rem, 5vw, 4rem);
+  overflow: clip;
+  isolation: isolate;
+}
+
+/* Soft navy depth, top-right; the mood lives in brand color, not the bg */
+.glow {
+  position: absolute;
+  z-index: -1;
+  top: -20%;
+  right: -10%;
+  width: min(70vw, 760px);
+  height: min(70vw, 760px);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    oklch(0.3 0.062 255 / 0.1),
+    transparent 62%
+  );
+  filter: blur(10px);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4.5rem);
+}
+
+/* ---- Copy column ---- */
+.copy {
+  max-width: 36rem;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-navy);
+  background: oklch(0.3 0.062 255 / 0.07);
+  border: 1px solid oklch(0.3 0.062 255 / 0.12);
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  margin-bottom: 1.5rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: oklch(0.7 0.16 150);
+  box-shadow: 0 0 0 4px oklch(0.7 0.16 150 / 0.2);
+}
+
+.title {
+  font-size: clamp(2.6rem, 5.6vw, 4.6rem);
+  font-weight: 500;
+  line-height: 1.04;
+  color: var(--color-ink);
+}
+
+.em {
+  font-style: italic;
+  color: var(--color-navy);
+}
+
+.lead {
+  margin-top: 1.4rem;
+  font-size: clamp(1rem, 1.3vw, 1.18rem);
+  line-height: 1.65;
+  color: var(--color-muted);
+  max-width: 33rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.5rem;
+  margin-top: 2rem;
+}
+
+.ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-ink);
+  padding: 0.85rem 0.5rem;
+  position: relative;
+}
+
+.ghost::after {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  right: 0.5rem;
+  bottom: 0.7rem;
+  height: 1.5px;
+  background: var(--color-ink);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s var(--ease-out-expo);
+}
+
+.ghost:hover::after {
+  transform: scaleX(1);
+}
+
+/* ---- Trust row ---- */
+.trust {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.avatars {
+  display: flex;
+}
+
+.trustAvatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-bg);
+  margin-left: -12px;
+}
+
+.trustAvatar:first-child {
+  margin-left: 0;
+}
+
+.trustStars {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+  color: var(--color-ink);
+}
+
+.trustStars strong {
+  margin-left: 0.35rem;
+  font-size: 0.95rem;
+}
+
+.trustText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.trustNote {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+/* ---- Figure column ---- */
+.figure {
+  position: relative;
+  justify-self: center;
+  width: 100%;
+  max-width: 480px;
+}
+
+.frame {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: 28px;
+  overflow: hidden;
+  background: var(--color-navy-deep);
+  box-shadow: 0 40px 90px oklch(0.2 0.05 258 / 0.25);
+}
+
+.heroImg {
+  object-fit: cover;
+  animation: kenburns 16s var(--ease-out-quart) forwards;
+}
+
+/* Floating dentist card */
+.card {
+  position: absolute;
+  left: -1.5rem;
+  bottom: 2.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: oklch(1 0 0 / 0.92);
+  backdrop-filter: blur(16px);
+  border: 1px solid oklch(1 0 0 / 0.6);
+  border-radius: 16px;
+  padding: 0.75rem 1.1rem 0.75rem 0.75rem;
+  box-shadow: 0 24px 50px oklch(0.16 0.045 258 / 0.28);
+  max-width: 17rem;
+}
+
+.cardAvatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  object-fit: cover;
+  flex: none;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.05rem;
+}
+
+.cardName {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.cardRole {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+
+.cardRating {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  margin-top: 0.15rem;
+}
+
+.cardNote {
+  font-weight: 400;
+  color: var(--color-muted);
+}
+
+/* Floating stat chip */
+.chip {
+  position: absolute;
+  right: -1rem;
+  top: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.05rem;
+  background: var(--color-navy);
+  color: var(--color-on-navy);
+  padding: 0.85rem 1.1rem;
+  border-radius: 14px;
+  box-shadow: 0 18px 40px oklch(0.16 0.045 258 / 0.35);
+}
+
+.chipNum {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.chipLabel {
+  font-size: 0.74rem;
+  color: var(--color-on-navy-muted);
+  max-width: 8ch;
+}
+
+/* ---- Pills row ---- */
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+  padding-top: clamp(1.5rem, 3vw, 2rem);
+  border-top: 1px solid var(--color-line);
+  list-style: none;
+}
+
+.pillsLabel {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-right: 0.5rem;
+}
+
+.pill {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--color-ink);
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  transition: border-color 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+
+.pill:hover {
+  border-color: var(--color-navy);
+  color: var(--color-navy);
+}
+
+/* ---- Entrance ----
+   Content is visible by default; the rise animation only applies when JS is
+   present (html.js, set before paint). If JS never runs, nothing is hidden. */
+.a0,
+.a1,
+.a2,
+.a3,
+.a4,
+.a5 {
+  opacity: 1;
+}
+
+:global(html.js) .a0,
+:global(html.js) .a1,
+:global(html.js) .a2,
+:global(html.js) .a3,
+:global(html.js) .a4,
+:global(html.js) .a5 {
+  animation: rise 0.9s var(--ease-out-expo) both;
+}
+:global(html.js) .a0 { animation-delay: 0.05s; }
+:global(html.js) .a1 { animation-delay: 0.16s; }
+:global(html.js) .a2 { animation-delay: 0.28s; }
+:global(html.js) .a3 { animation-delay: 0.4s; }
+:global(html.js) .a4 { animation-delay: 0.52s; }
+:global(html.js) .a5 { animation-delay: 0.64s; }
+
+/* Transform-only: opacity is never touched, so this animation can never hide
+   content. Worst case is a few pixels of offset. */
+@keyframes rise {
+  from { transform: translateY(22px); }
+  to { transform: translateY(0); }
+}
+
+@keyframes kenburns {
+  from { transform: scale(1.08); }
+  to { transform: scale(1); }
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 980px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .copy {
+    max-width: 40rem;
+  }
+  .figure {
+    order: -1;
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 560px) {
+  .frame {
+    aspect-ratio: 1 / 1;
+  }
+  .card {
+    left: 0.5rem;
+    bottom: -1.5rem;
+    padding: 0.6rem 0.9rem 0.6rem 0.6rem;
+    max-width: 15rem;
+  }
+  .cardAvatar {
+    width: 42px;
+    height: 42px;
+  }
+  .chip {
+    right: 0.5rem;
+    top: 0.75rem;
+    padding: 0.65rem 0.85rem;
+  }
+  .figure {
+    margin-bottom: 1.5rem;
+  }
+  .trust {
+    margin-top: 2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :global(html.js) .a0,
+  :global(html.js) .a1,
+  :global(html.js) .a2,
+  :global(html.js) .a3,
+  :global(html.js) .a4,
+  :global(html.js) .a5,
+  .a0, .a1, .a2, .a3, .a4, .a5,
+  .heroImg {
+    animation: none;
+    transform: none;
+  }
+}
