@@ -86,6 +86,46 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <section className="section">
+        <div className={`container ${styles.pressGrid}`}>
+          <Reveal className={styles.workMedia}>
+            <div className={styles.workPhone}>
+              <video
+                className={styles.workVideo}
+                poster="/clinic/doctor-at-work-poster.jpg"
+                controls
+                muted
+                loop
+                autoPlay
+                playsInline
+                preload="metadata"
+              >
+                <source src="/clinic/doctor-at-work.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <p className={styles.workCaption}>Dr. Radhika at work</p>
+          </Reveal>
+
+          <Reveal className={styles.press} delay={120}>
+            <p className="eyebrow">As featured in</p>
+            <h2 className={styles.h2}>Featured in Bombay Times</h2>
+            <p className={styles.para}>
+              Dr. Radhika was featured in Bombay Times (India) as a Women
+              Entrepreneur, sharing her expertise on nurturing women&apos;s oral
+              health.
+            </p>
+            <Image
+              src="/clinic/doctor/bombay-times.jpg"
+              alt="Dr. Radhika Ujjankar featured in Bombay Times — Nurturing women's oral health"
+              width={1100}
+              height={1119}
+              className={styles.pressImg}
+              sizes="(max-width: 920px) 90vw, 520px"
+            />
+          </Reveal>
+        </div>
+      </section>
+
       <section className={`section ${styles.credsSection}`}>
         <div className="container">
           <Reveal>

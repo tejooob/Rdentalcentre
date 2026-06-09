@@ -71,8 +71,16 @@
   object-fit: contain;
 }
 
+.tagline {
+  margin-top: 0.6rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--color-accent);
+}
+
 .blurb {
-  margin-top: 1rem;
+  margin-top: 0.6rem;
   color: var(--color-on-navy-muted);
   max-width: 32ch;
   font-size: 0.95rem;

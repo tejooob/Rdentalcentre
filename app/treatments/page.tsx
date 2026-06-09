@@ -20,7 +20,7 @@ export default function TreatmentsPage() {
       <PageHero
         eyebrow="What we do"
         title="Treatments for every smile"
-        subtitle="From routine checkups to full smile makeovers, every treatment under one calm roof in Nerul (W) — no referrals needed."
+        subtitle="From routine checkups to full smile makeovers — every treatment under one calm roof in Nerul (W), handled by a panel of specialist doctors. No referrals needed."
         crumb="Treatments"
       />
 
@@ -58,7 +58,8 @@ export default function TreatmentsPage() {
           <Reveal className={styles.cta}>
             <p>
               Not sure what you need? Take the 30-second smile quiz or talk to
-              us directly.
+              us directly. Easy EMI &amp; financing options are available to keep
+              treatment comfortable on your budget.
             </p>
             <div className={styles.ctaActions}>
               <Link href="/booking#quiz" className="btn btn-primary">

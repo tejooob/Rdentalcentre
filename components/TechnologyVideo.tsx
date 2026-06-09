@@ -25,21 +25,26 @@ export default function TechnologyVideo() {
         </Reveal>
 
         <Reveal className={styles.media} delay={120}>
-          <div className={styles.phone}>
-            <video
-              className={styles.video}
-              poster={technology.poster}
-              controls
-              muted
-              loop
-              autoPlay
-              playsInline
-              preload="metadata"
-            >
-              <source src={technology.video} type="video/mp4" />
-              Your browser doesn&apos;t support embedded video.
-            </video>
-          </div>
+          {technology.clips.map((clip) => (
+            <figure key={clip.src} className={styles.clip}>
+              <div className={styles.phone}>
+                <video
+                  className={styles.video}
+                  poster={clip.poster}
+                  controls
+                  muted
+                  loop
+                  autoPlay
+                  playsInline
+                  preload="metadata"
+                >
+                  <source src={clip.src} type="video/mp4" />
+                  Your browser doesn&apos;t support embedded video.
+                </video>
+              </div>
+              <figcaption className={styles.clipLabel}>{clip.label}</figcaption>
+            </figure>
+          ))}
         </Reveal>
       </div>
     </section>

@@ -86,6 +86,10 @@ export const images = {
     src: "https://images.pexels.com/photos/12148417/pexels-photo-12148417.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     alt: "Examination and treatment for healthy gums",
   },
+  treatmentJewellery: {
+    src: "https://images.pexels.com/photos/3762468/pexels-photo-3762468.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    alt: "A bright, glamorous smile with a touch of sparkle",
+  },
   galleryBefore1: {
     src: "https://images.pexels.com/photos/12474261/pexels-photo-12474261.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     alt: "Before: crowded, uneven teeth",

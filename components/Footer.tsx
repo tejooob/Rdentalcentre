@@ -43,6 +43,7 @@ export default function Footer() {
               />
               {clinic.name}
             </span>
+            <p className={styles.tagline}>{clinic.brandTagline}</p>
             <p className={styles.blurb}>
               Excellence in dentistry. Premium, gentle care for your perfect
               smile, in {clinic.area}.

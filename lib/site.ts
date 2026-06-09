@@ -7,6 +7,7 @@
 export const clinic = {
   name: "R Dental Centre",
   tagline: "Complete Dental Care. One Trusted Address.",
+  brandTagline: "Your Smile, Our Commitment",
   // Phone shown to users and the dial-able version.
   phoneDisplay: "+91 93248 74151",
   phoneDial: "+919324874151",
@@ -17,8 +18,8 @@ export const clinic = {
   addressLine2: "Opp. N.R. Bhagat School, Nerul (W), Navi Mumbai – 400 706",
   area: "Nerul",
   hours: [
-    { days: "Tue – Sat", time: "12:00 PM – 8:00 PM" },
-    { days: "Mon & Sun", time: "Closed" },
+    { days: "Mon – Sat", time: "10:00 AM – 9:00 PM" },
+    { days: "Sunday", time: "Open (by appointment)" },
   ],
   mapsUrl:
     "https://www.google.com/maps/search/?api=1&query=R+Dental+Centre+Sector+16A+Nerul+West+Navi+Mumbai",

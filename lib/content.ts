@@ -28,7 +28,7 @@ export const heroPills = [
  * ------------------------------------------------------------------ */
 export const doctor = {
   name: "Dr. Radhika Ujjankar",
-  title: "Cosmetic & Laser Dentist",
+  title: "Cosmetic & Laser Surgeon",
   credentials: "BDS, PGDHCM",
   experienceYears: 12,
   reviewCount: 242,
@@ -36,12 +36,14 @@ export const doctor = {
   rating: 4.8,
   note: "12+ yrs practice",
   bio: [
-    "Dr. Radhika Ujjankar is a BDS-qualified dental surgeon with a Post Graduate Diploma in Hospital & Clinical Management from Mumbai. With over a decade of experience in cosmetic, laser, and family dentistry, she has built R Dental Centre into one of Nerul's most trusted dental practices.",
-    "Known for painless procedures and a patient-first approach, Dr. Radhika brings expertise in smile design, laser treatments, and complex restorative work, all delivered with warmth and precision. Our biggest recognition is the trust of the families who keep coming back, and who send their loved ones our way.",
+    "Dr. Radhika Ujjankar is a BDS-qualified cosmetic & laser surgeon with a Post Graduation in Health Care Management (PGDHCM). With over a decade of experience in cosmetic, laser, and family dentistry, she has built R Dental Centre into one of Nerul's most trusted dental practices.",
+    "She has worked at reputable Mumbai hospitals including Hinduja Hospital, and trained under some of India's top celebrity dentists, experience she brings to every smile design, laser treatment and complex restorative case. Known for painless procedures and a patient-first approach, her biggest recognition is the trust of the families who keep coming back, and who send their loved ones our way.",
+    "Beyond Dr. Radhika, R Dental Centre brings together a panel of specialist doctors for every treatment — including a dedicated kids' specialist team — so whatever your family needs, the right expert is already under one roof.",
   ],
   qualifications: [
     "BDS — Bachelor of Dental Surgery",
-    "PGDHCM — PG Diploma in Hospital & Clinical Management, Mumbai",
+    "PGDHCM — Post Graduation in Health Care Management",
+    "Cosmetic & Laser Surgeon",
     "Registered Dental Surgeon (Reg. No. A-35407)",
   ],
   certifications: [
@@ -56,9 +58,10 @@ export const doctor = {
     "Full-mouth rehabilitation",
   ],
   awards: [
+    "Experience at Hinduja Hospital, Mumbai",
+    "Trained under leading celebrity dentists in India",
     "4.8★ on Justdial (242+ reviews)",
     "Trusted by Nerul families for over a decade",
-    "Known for painless, complex procedures",
   ],
 };
 
@@ -93,7 +96,8 @@ export const treatments = [
   { tag: "Preventive", title: "Teeth Cleaning & Polishing", blurb: "Thorough scaling and polishing that keeps gums healthy and catches problems early.", image: images.serviceCleaning, priceFrom: "On consult" },
   { tag: "Restorative", title: "Cavity Fillings", blurb: "Tooth-coloured fillings that restore the bite and blend in seamlessly.", image: images.serviceFilling, priceFrom: "On consult" },
   { tag: "Surgical", title: "Wisdom Tooth Removal", blurb: "Specialist removal of impacted third molars, gentle and carefully managed.", image: images.treatmentGum, priceFrom: "On consult" },
-  { tag: "Kids", title: "Children's Dentistry", blurb: "Friendly, patient care that helps children feel safe and build good habits.", image: images.treatmentKids, priceFrom: "On consult" },
+  { tag: "Kids", title: "Children's Dentistry", blurb: "A dedicated kids' specialist panel for all children's dental treatments, plus diet counselling and parent–teacher counselling to build healthy habits early.", image: images.treatmentKids, priceFrom: "On consult" },
+  { tag: "Cosmetic", title: "Dental Jewellery", blurb: "A little sparkle for your smile — a safe, painless tooth gem bonded to the tooth surface. No drilling, no damage to enamel, and removable whenever you like.", image: images.treatmentJewellery, priceFrom: "On consult" },
 ];
 
 /* ------------------------------------------------------------------ *
@@ -212,15 +216,25 @@ export const clinicTour = [
  * ------------------------------------------------------------------ */
 export const technology = {
   eyebrow: "Technology",
-  title: "Dentistry you can actually see",
-  text: "We use an intraoral camera and digital imaging to show you exactly what we see, magnified on screen, so nothing is hidden and every plan makes sense. Clearer diagnosis, fewer surprises, and care you can understand at every step.",
+  title: "Digital dentistry — no more messy impressions",
+  text: "We've gone fully digital. A quick intraoral scan replaces the old, uncomfortable impression trays, and our intraoral camera shows you exactly what we see, magnified on screen. The result: clearer diagnosis, faster treatment, and care you can actually understand.",
   points: [
+    "Digital intraoral scanning — no more messy manual impressions",
     "Live intraoral camera — your teeth, magnified on screen",
-    "Digital imaging for precise, confident diagnosis",
     "Laser-assisted treatment for faster, gentler healing",
   ],
-  video: "/clinic/technology.mp4",
-  poster: "/clinic/technology-poster.jpg",
+  clips: [
+    {
+      src: "/clinic/digital-scan.mp4",
+      poster: "/clinic/digital-scan-poster.jpg",
+      label: "Digital intraoral scanning",
+    },
+    {
+      src: "/clinic/technology.mp4",
+      poster: "/clinic/technology-poster.jpg",
+      label: "Intraoral camera",
+    },
+  ],
 };
 
 /* ------------------------------------------------------------------ *
@@ -229,12 +243,13 @@ export const technology = {
 export const faqs = [
   { q: "Does the treatment hurt?", a: "We focus on painless dentistry. Most procedures use gentle local anaesthesia and laser techniques, and patients regularly tell us even root canals and gum surgery were comfortable." },
   { q: "How do I book an appointment?", a: "Tap any “Chat on WhatsApp” button or use the booking form, it opens WhatsApp with your details ready to send. You can also call us on +91 93248 74151. We work by appointment, so your time is respected." },
-  { q: "What are your timings?", a: "We're open Tuesday to Saturday, 12:00 PM to 8:00 PM. We're closed on Monday and Sunday. Appointments are preferred, and emergency cases are accommodated." },
+  { q: "What are your timings?", a: "We're open Monday to Saturday, 10:00 AM to 9:00 PM. On Sundays we're open by appointment. Appointments are preferred, and emergency cases are accommodated." },
   { q: "Where are you located?", a: "R Dental Centre is at Plot No. 98, Sector 16A, opposite N.R. Bhagat School (Ganpati Mandir Road), Nerul (West), Navi Mumbai – 400 706. See the Contact page for the map and directions." },
-  { q: "Do you treat children?", a: "Yes. Dr. Radhika is a children's dental specialist, and the clinic is a friendly, reassuring place that helps kids feel safe and build good habits early." },
+  { q: "Do you treat children?", a: "Yes — we have a dedicated kids' specialist panel for all children's dental treatments. Alongside gentle, reassuring care, we also offer diet counselling and parent–teacher counselling to help children build healthy habits early." },
   { q: "Do you offer laser treatments?", a: "Yes. We use advanced laser dentistry for many procedures, which often means faster healing, less bleeding and minimal discomfort." },
-  { q: "Can I get all my treatment in one place?", a: "Yes, everything is under one roof, from cleanings and fillings to root canals, implants, braces and full-mouth rehabilitation, so you rarely need a referral elsewhere." },
+  { q: "Can I get all my treatment in one place?", a: "Yes. We have a panel of specialist doctors for all treatments, so everything is under one roof — from cleanings and fillings to root canals, implants, braces and full-mouth rehabilitation. You rarely need a referral elsewhere." },
   { q: "What safety and hygiene measures do you follow?", a: "We maintain strict, clinic-grade sterilisation protocols for every instrument and keep the clinic clean and sanitised at every visit." },
+  { q: "Do you offer EMI or payment plans?", a: "Yes — we offer easy EMI and financing options to make treatment comfortable on your budget. Ask us and we'll help you find a plan that suits you." },
 ];
 
 /* ------------------------------------------------------------------ *
