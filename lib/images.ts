@@ -90,6 +90,14 @@ export const images = {
     src: "https://images.pexels.com/photos/3762468/pexels-photo-3762468.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     alt: "A bright, glamorous smile with a touch of sparkle",
   },
+  treatmentFullMouth: {
+    src: "https://images.pexels.com/photos/6627606/pexels-photo-6627606.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    alt: "A full-arch dental prosthesis being finished by the dentist",
+  },
+  treatmentSameDay: {
+    src: "https://images.pexels.com/photos/4687905/pexels-photo-4687905.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    alt: "A dental implant securing fixed replacement teeth",
+  },
   galleryBefore1: {
     src: "https://images.pexels.com/photos/12474261/pexels-photo-12474261.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     alt: "Before: crowded, uneven teeth",

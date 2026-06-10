@@ -30,11 +30,11 @@ export const doctor = {
   name: "Dr. Radhika Ujjankar",
   title: "Cosmetic & Laser Surgeon",
   credentials: "BDS, PGDHCM",
-  experienceYears: 12,
-  reviewCount: 242,
+  experienceYears: 10,
+  reviewCount: 251,
   image: images.dentistFeatured,
-  rating: 4.8,
-  note: "12+ yrs practice",
+  rating: 4.9,
+  note: "10+ yrs practice",
   bio: [
     "Dr. Radhika Ujjankar is a BDS-qualified cosmetic & laser surgeon with a Post Graduation in Health Care Management (PGDHCM). With over a decade of experience in cosmetic, laser, and family dentistry, she has built R Dental Centre into one of Nerul's most trusted dental practices.",
     "She has worked at reputable Mumbai hospitals including Hinduja Hospital, and trained under some of India's top celebrity dentists, experience she brings to every smile design, laser treatment and complex restorative case. Known for painless procedures and a patient-first approach, her biggest recognition is the trust of the families who keep coming back, and who send their loved ones our way.",
@@ -60,7 +60,7 @@ export const doctor = {
   awards: [
     "Experience at Hinduja Hospital, Mumbai",
     "Trained under leading celebrity dentists in India",
-    "4.8★ on Justdial (242+ reviews)",
+    "4.9★ on Google (251+ reviews)",
     "Trusted by Nerul families for over a decade",
   ],
 };
@@ -78,21 +78,24 @@ export const featuredDentist = {
  * Treatments  (home preview = `services`, full list = `treatments`)
  * ------------------------------------------------------------------ */
 export const services = [
-  { tag: "Endodontics", title: "Root Canal Treatment", blurb: "Pain-free root canals that save the natural tooth and stop the ache, done with care.", image: images.treatmentRootCanal },
-  { tag: "Cosmetic", title: "Cosmetic Smile Design", blurb: "Expert smile makeovers using whitening, veneers and bonding, shaped to suit your face.", image: images.treatmentSmileMakeover },
-  { tag: "Advanced", title: "Laser Dentistry", blurb: "Advanced laser procedures for faster healing, less bleeding and minimal discomfort.", image: images.serviceCheckup },
-  { tag: "Surgical", title: "Dental Implants", blurb: "Permanent, natural-feeling replacements for missing teeth, planned precisely.", image: images.treatmentImplants },
-  { tag: "Cosmetic", title: "Teeth Whitening", blurb: "Even, controlled whitening with shade matching, kind to sensitive teeth.", image: images.serviceWhitening },
+  { tag: "Surgical", title: "Dental Implants", blurb: "Permanent, natural-feeling replacements for missing teeth, planned and placed with precision.", image: images.treatmentImplants },
+  { tag: "Restorative", title: "Full-Mouth Rehabilitation", blurb: "Rebuild a complete, functional smile — combining implants, crowns and bridges to restore every tooth, your bite and your confidence.", image: images.treatmentFullMouth },
+  { tag: "Implants", title: "Fixed Teeth in 3–5 Days", blurb: "Walk in without teeth and leave with a fixed, full-arch smile in just 3–5 days — no long wait, no removable dentures.", image: images.treatmentSameDay },
+  { tag: "Cosmetic", title: "Dental Veneers", blurb: "Ultra-thin, custom shells that mask chips, gaps and stains for a flawless, natural-looking smile.", image: images.serviceVeneers },
+  { tag: "Orthodontics", title: "Clear Aligners", blurb: "Straighten your teeth discreetly with comfortable, removable clear aligners — barely visible and easy to live with.", image: images.treatmentAligners },
+  { tag: "Cosmetic", title: "Smile Makeovers", blurb: "A tailored plan combining whitening, veneers and bonding to redesign your whole smile.", image: images.treatmentSmileMakeover },
 ];
 
 export const treatments = [
-  { tag: "Endodontics", title: "Root Canal Treatment", blurb: "Pain-free root canals that save the natural tooth and stop the ache.", image: images.treatmentRootCanal, priceFrom: "On consult" },
-  { tag: "Cosmetic", title: "Cosmetic Smile Design", blurb: "A tailored plan combining whitening, veneers and bonding to redesign your smile.", image: images.treatmentSmileMakeover, priceFrom: "On consult" },
+  { tag: "Surgical", title: "Dental Implants", blurb: "Permanent, natural-feeling replacements for one or more missing teeth, planned and placed with precision.", image: images.treatmentImplants, priceFrom: "On consult" },
+  { tag: "Restorative", title: "Full-Mouth Rehabilitation", blurb: "A complete plan combining implants, crowns and bridges to rebuild every tooth, restore your bite and renew your confidence.", image: images.treatmentFullMouth, priceFrom: "On consult" },
+  { tag: "Implants", title: "Fixed Teeth in 3–5 Days", blurb: "Walk in without teeth and leave with a fixed, full-arch smile in just 3–5 days — no long wait and no removable dentures.", image: images.treatmentSameDay, priceFrom: "On consult" },
+  { tag: "Cosmetic", title: "Dental Veneers & Crowns", blurb: "Ultra-thin veneers and tooth-coloured crowns and bridges that mask chips, gaps and stains and restore a flawless, natural look.", image: images.serviceVeneers, priceFrom: "On consult" },
+  { tag: "Orthodontics", title: "Clear Aligners", blurb: "Discreet, removable aligners — and traditional braces too — to straighten teeth and correct the bite, for kids and adults.", image: images.treatmentAligners, priceFrom: "On consult" },
+  { tag: "Cosmetic", title: "Smile Makeover", blurb: "A tailored plan combining whitening, veneers and bonding to redesign your whole smile.", image: images.treatmentSmileMakeover, priceFrom: "On consult" },
   { tag: "Cosmetic", title: "Teeth Whitening", blurb: "Safe, even whitening that lifts stains and brightens your shade in one session.", image: images.serviceWhitening, priceFrom: "On consult" },
-  { tag: "Restorative", title: "Crowns & Bridges", blurb: "Tooth-coloured caps and fixed bridges that restore strength and a natural look.", image: images.serviceVeneers, priceFrom: "On consult" },
-  { tag: "Surgical", title: "Dental Implants", blurb: "Permanent, natural-feeling replacements for one or more missing teeth.", image: images.treatmentImplants, priceFrom: "On consult" },
+  { tag: "Endodontics", title: "Root Canal Treatment", blurb: "Pain-free root canals that save the natural tooth and stop the ache.", image: images.treatmentRootCanal, priceFrom: "On consult" },
   { tag: "Advanced", title: "Laser Dentistry", blurb: "Laser-assisted treatment for faster healing, less bleeding and minimal discomfort.", image: images.serviceCheckup, priceFrom: "On consult" },
-  { tag: "Orthodontics", title: "Braces", blurb: "Straighten crooked or gapped teeth and correct the bite, for kids and adults.", image: images.treatmentAligners, priceFrom: "On consult" },
   { tag: "Preventive", title: "Teeth Cleaning & Polishing", blurb: "Thorough scaling and polishing that keeps gums healthy and catches problems early.", image: images.serviceCleaning, priceFrom: "On consult" },
   { tag: "Restorative", title: "Cavity Fillings", blurb: "Tooth-coloured fillings that restore the bite and blend in seamlessly.", image: images.serviceFilling, priceFrom: "On consult" },
   { tag: "Surgical", title: "Wisdom Tooth Removal", blurb: "Specialist removal of impacted third molars, gentle and carefully managed.", image: images.treatmentGum, priceFrom: "On consult" },
@@ -104,9 +107,9 @@ export const treatments = [
  * Stats
  * ------------------------------------------------------------------ */
 export const stats = [
-  { value: 4.8, suffix: "", decimals: 1, label: "Justdial rating", star: true },
-  { value: 242, suffix: "+", decimals: 0, label: "Patient reviews" },
-  { value: 12, suffix: "+", decimals: 0, label: "Years of care" },
+  { value: 4.9, suffix: "", decimals: 1, label: "Google rating", star: true },
+  { value: 251, suffix: "+", decimals: 0, label: "Patient reviews" },
+  { value: 10, suffix: "+", decimals: 0, label: "Years of care" },
   { value: 15, suffix: "+", decimals: 0, label: "Treatments offered" },
 ];
 
@@ -143,8 +146,7 @@ export const estimatorItems = [
 
 /* ------------------------------------------------------------------ *
  * Reviews + Video testimonials
- * (One verified Justdial review below; the other two are representative
- *  placeholders — replace with real Google/Justdial reviews.)
+ * (Real 5★ Google reviews from patients.)
  * ------------------------------------------------------------------ */
 export const testimonials = [
   {

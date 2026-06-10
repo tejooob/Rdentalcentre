@@ -106,8 +106,8 @@ const jsonLd = {
   medicalSpecialty: ["Dentistry", "Cosmetic Dentistry", "Laser Dentistry"],
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: "4.8",
-    reviewCount: "242",
+    ratingValue: "4.9",
+    reviewCount: "251",
   },
   founder: {
     "@type": "Person",

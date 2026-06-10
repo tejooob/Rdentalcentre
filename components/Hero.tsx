@@ -60,9 +60,9 @@ export default function Hero() {
                 {Array.from({ length: 5 }).map((_, n) => (
                   <Star key={n} style={{ color: "var(--color-accent)" }} />
                 ))}
-                <strong>4.8</strong>
+                <strong>4.9</strong>
               </span>
-              <span className={styles.trustNote}>from 242+ Justdial reviews</span>
+              <span className={styles.trustNote}>from 251+ Google reviews</span>
             </div>
           </div>
         </div>
