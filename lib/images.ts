@@ -11,8 +11,8 @@ export type Img = { src: string; alt: string };
 
 export const images = {
   hero: {
-    src: "/clinic/clinic-1.jpg",
-    alt: "The treatment room at R Dental Centre, Nerul",
+    src: "/clinic/clinic-4.jpg",
+    alt: "A modern, fully-equipped treatment room at R Dental Centre, Nerul",
   },
   serviceCleaning: {
     src: "https://images.pexels.com/photos/5622010/pexels-photo-5622010.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",

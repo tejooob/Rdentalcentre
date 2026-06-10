@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { technology } from "@/lib/content";
 import Reveal from "./Reveal";
 import { Check } from "./icons";
@@ -46,6 +47,38 @@ export default function TechnologyVideo() {
             </figure>
           ))}
         </Reveal>
+      </div>
+
+      <div className={`container ${styles.equip}`}>
+        <Reveal className={styles.equipHead}>
+          <h3 className={styles.equipTitle}>{technology.equipmentHeading}</h3>
+          <p className={styles.equipIntro}>{technology.equipmentIntro}</p>
+        </Reveal>
+
+        <div className={styles.equipGrid}>
+          {technology.equipment.map((item, i) => (
+            <Reveal
+              key={item.src}
+              delay={i * 90}
+              className={styles.equipCardReveal}
+            >
+              <figure className={styles.equipCard}>
+                <div className={styles.equipMedia}>
+                  <Image
+                    src={item.src}
+                    alt={item.label}
+                    fill
+                    sizes="(max-width: 760px) 90vw, 320px"
+                    className={styles.equipImg}
+                  />
+                </div>
+                <figcaption className={styles.equipLabel}>
+                  {item.label}
+                </figcaption>
+              </figure>
+            </Reveal>
+          ))}
+        </div>
       </div>
     </section>
   );

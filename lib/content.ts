@@ -237,6 +237,14 @@ export const technology = {
       label: "Intraoral camera",
     },
   ],
+  equipmentHeading: "State-of-the-art equipment & machines",
+  equipmentIntro:
+    "We invest in advanced, precision machines so every procedure is faster, safer and more comfortable.",
+  equipment: [
+    { src: "/clinic/equipment-1.jpg", label: "Advanced endodontic technology" },
+    { src: "/clinic/equipment-2.jpg", label: "Cordless obturation system" },
+    { src: "/clinic/equipment-3.jpg", label: "Cordless endo motor" },
+  ],
 };
 
 /* ------------------------------------------------------------------ *
