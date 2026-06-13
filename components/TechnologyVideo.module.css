@@ -31,7 +31,7 @@
 
 .equipGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: clamp(1rem, 2.5vw, 1.5rem);
 }
 
@@ -75,9 +75,7 @@
 
 @media (max-width: 760px) {
   .equipGrid {
-    grid-template-columns: 1fr;
-    max-width: 22rem;
-    margin-inline: auto;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -115,8 +113,8 @@
   height: 30px;
   flex: none;
   border-radius: 50%;
-  background: oklch(0.3 0.062 255 / 0.1);
-  color: var(--color-navy);
+  background: oklch(0.80 0.115 78 / 0.14);
+  color: var(--color-accent-ink);
 }
 
 /* Portrait "phone" frames for the vertical clips */

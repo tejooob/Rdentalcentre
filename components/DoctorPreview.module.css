@@ -89,8 +89,8 @@
   height: 30px;
   flex: none;
   border-radius: 50%;
-  background: oklch(0.3 0.062 255 / 0.1);
-  color: var(--color-navy);
+  background: oklch(0.80 0.115 78 / 0.14);
+  color: var(--color-accent-ink);
 }
 
 .proof {

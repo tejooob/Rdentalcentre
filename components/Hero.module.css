@@ -53,8 +53,8 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: oklch(0.7 0.16 150);
-  box-shadow: 0 0 0 4px oklch(0.7 0.16 150 / 0.2);
+  background: var(--color-accent);
+  box-shadow: 0 0 0 4px oklch(0.80 0.115 78 / 0.25);
 }
 
 .title {

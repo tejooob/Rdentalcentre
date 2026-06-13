@@ -191,6 +191,15 @@ export const videoTestimonials = [
     },
     video: "/clinic/testimonials/testimonial-2.mp4",
   },
+  {
+    name: "Patient story",
+    treatment: "In their words · R Dental Centre",
+    poster: {
+      src: "/clinic/testimonials/testimonial-3-poster.jpg",
+      alt: "Patient sharing their experience at R Dental Centre",
+    },
+    video: "/clinic/testimonials/testimonial-3.mp4",
+  },
 ];
 
 /* ------------------------------------------------------------------ *
@@ -244,6 +253,7 @@ export const technology = {
     { src: "/clinic/equipment-1.jpg", label: "Advanced endodontic technology" },
     { src: "/clinic/equipment-2.jpg", label: "Cordless obturation system" },
     { src: "/clinic/equipment-3.jpg", label: "Cordless endo motor" },
+    { src: "/clinic/equipment-4.jpg", label: "Precision dental equipment" },
   ],
 };
 
