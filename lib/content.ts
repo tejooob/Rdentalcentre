@@ -253,7 +253,8 @@ export const technology = {
     { src: "/clinic/equipment-1.jpg", label: "Advanced endodontic technology" },
     { src: "/clinic/equipment-2.jpg", label: "Cordless obturation system" },
     { src: "/clinic/equipment-3.jpg", label: "Cordless endo motor" },
-    { src: "/clinic/equipment-4.jpg", label: "Precision dental equipment" },
+    { src: "/clinic/equipment-4.jpg", label: "Implant Physiodispenser" },
+    { src: "/clinic/equipment-5.jpg", label: "Dental Laser Machine" },
   ],
 };
 
