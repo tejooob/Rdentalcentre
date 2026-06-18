@@ -245,6 +245,11 @@ export const technology = {
       poster: "/clinic/technology-poster.jpg",
       label: "Intraoral camera",
     },
+    {
+      src: "/clinic/equipment-machine.mp4",
+      poster: "/clinic/equipment-machine-poster.jpg",
+      label: "Implant Physiodispenser",
+    },
   ],
   equipmentHeading: "State-of-the-art equipment & machines",
   equipmentIntro:
