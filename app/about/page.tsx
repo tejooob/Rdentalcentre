@@ -24,7 +24,7 @@ const credentialGroups = [
 
 export default function AboutPage() {
   return (
-    <main>
+    <main id="main-content">
       <PageHero
         eyebrow="About the doctor"
         title={`Meet ${doctor.name}`}
@@ -101,6 +101,7 @@ export default function AboutPage() {
                 preload="metadata"
               >
                 <source src="/clinic/doctor-at-work.mp4" type="video/mp4" />
+                <track kind="captions" src="/captions/doctor-at-work.vtt" srcLang="en" label="English" default />
               </video>
             </div>
             <p className={styles.workCaption}>Dr. Radhika at work</p>

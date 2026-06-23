@@ -40,7 +40,7 @@ export default async function PostPage({
   if (!post) notFound();
 
   return (
-    <main className={styles.main}>
+    <main id="main-content" className={styles.main}>
       <article>
         <header className={styles.header}>
           <div className={`container ${styles.headInner}`}>

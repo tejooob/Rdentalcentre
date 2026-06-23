@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function GalleryPage() {
   return (
-    <main>
+    <main id="main-content">
       <PageHero
         eyebrow="Before & after"
         title="Smiles we've transformed"

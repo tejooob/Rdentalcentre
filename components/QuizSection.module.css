@@ -20,7 +20,7 @@
 
 .title {
   font-size: clamp(2rem, 4vw, 3.25rem);
-  color: #fff;
+  color: var(--color-on-navy);
   margin-top: 0.8rem;
 }
 

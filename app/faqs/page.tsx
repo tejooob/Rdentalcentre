@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function FaqsPage() {
   return (
-    <main>
+    <main id="main-content">
       <PageHero
         eyebrow="Good to know"
         title="Frequently asked questions"

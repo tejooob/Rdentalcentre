@@ -21,7 +21,7 @@ const reassurance = [
 
 export default function BookingPage() {
   return (
-    <main>
+    <main id="main-content">
       <PageHero
         eyebrow="Online booking"
         title="Book in under 30 seconds"

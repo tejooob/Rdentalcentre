@@ -34,6 +34,7 @@
   padding: 1.1rem 1.4rem;
   border-radius: 16px;
   box-shadow: 0 20px 45px oklch(0.2 0.05 258 / 0.35);
+  animation: float 6s ease-in-out infinite 0.5s;
 }
 
 .badgeNum {

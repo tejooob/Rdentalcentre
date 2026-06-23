@@ -22,7 +22,7 @@ const fmtDate = (d: string) =>
 
 export default function BlogPage() {
   return (
-    <main>
+    <main id="main-content">
       <PageHero
         eyebrow="Advice & insights"
         title="From the dentist's chair"

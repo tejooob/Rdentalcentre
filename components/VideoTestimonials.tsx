@@ -33,7 +33,15 @@ export default function VideoTestimonials() {
                   autoPlay
                   playsInline
                   preload="metadata"
-                />
+                >
+                  <track
+                    kind="captions"
+                    src={`/captions/${v.video.split("/").pop()?.replace(".mp4", ".vtt")}`}
+                    srcLang="en"
+                    label="English"
+                    default
+                  />
+                </video>
               ) : (
                 <button
                   type="button"

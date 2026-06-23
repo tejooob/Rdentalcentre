@@ -21,6 +21,8 @@
     transparent 62%
   );
   filter: blur(10px);
+  animation: pulse-glow 9s ease-in-out infinite;
+  transform-origin: center;
 }
 
 .inner {
@@ -198,6 +200,7 @@
   padding: 0.75rem 1.1rem 0.75rem 0.75rem;
   box-shadow: 0 24px 50px oklch(0.16 0.045 258 / 0.28);
   max-width: 17rem;
+  animation: float 7s ease-in-out infinite 2s;
 }
 
 .cardAvatar {
@@ -253,6 +256,7 @@
   padding: 0.85rem 1.1rem;
   border-radius: 14px;
   box-shadow: 0 18px 40px oklch(0.16 0.045 258 / 0.35);
+  animation: float 6s ease-in-out infinite 1s;
 }
 
 .chipNum {

@@ -40,7 +40,13 @@ export default function TechnologyVideo() {
                   preload="metadata"
                 >
                   <source src={clip.src} type="video/mp4" />
-                  Your browser doesn&apos;t support embedded video.
+                  <track
+                    kind="captions"
+                    src={`/captions/${clip.src.split("/").pop()?.replace(".mp4", ".vtt")}`}
+                    srcLang="en"
+                    label="English"
+                    default
+                  />
                 </video>
               </div>
               <figcaption className={styles.clipLabel}>{clip.label}</figcaption>

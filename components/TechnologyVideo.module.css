@@ -53,7 +53,8 @@
 
 .equipCard:hover {
   transform: translateY(-6px);
-  box-shadow: 0 26px 55px oklch(0.2 0.05 258 / 0.16);
+  box-shadow: 0 26px 55px oklch(0.2 0.05 258 / 0.16),
+    0 0 0 1px oklch(0.80 0.115 78 / 0.35);
 }
 
 .equipMedia {
@@ -154,6 +155,11 @@
   );
   box-shadow: 0 24px 55px oklch(0.2 0.05 258 / 0.26);
 }
+
+/* Staggered float — each phone bobs at a different phase */
+.clip:nth-child(1) .phone { animation: float 7s ease-in-out infinite 0s; }
+.clip:nth-child(2) .phone { animation: float 7s ease-in-out infinite 1.4s; }
+.clip:nth-child(3) .phone { animation: float 7s ease-in-out infinite 2.8s; }
 
 .video {
   width: 100%;

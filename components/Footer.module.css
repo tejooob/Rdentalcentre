@@ -24,7 +24,7 @@
 
 .ctaTitle {
   font-size: clamp(1.6rem, 3vw, 2.4rem);
-  color: #fff;
+  color: var(--color-on-navy);
   max-width: 18ch;
 }
 
@@ -39,6 +39,15 @@
   color: var(--color-navy-deep);
   font-weight: 700;
   flex: none;
+}
+
+.ctaBtn::after {
+  background: linear-gradient(
+    105deg,
+    transparent 30%,
+    oklch(1 0 0 / 0.3) 50%,
+    transparent 70%
+  );
 }
 
 .ctaBtn:hover {
@@ -62,7 +71,7 @@
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 1.25rem;
-  color: #fff;
+  color: var(--color-on-navy);
 }
 
 .mark {
@@ -110,7 +119,7 @@
 }
 
 .link:hover {
-  color: #fff;
+  color: var(--color-on-navy);
 }
 
 .contact {
@@ -128,7 +137,7 @@
 }
 
 a.contact:hover {
-  color: #fff;
+  color: var(--color-on-navy);
 }
 
 .hours {

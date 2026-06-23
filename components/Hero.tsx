@@ -56,11 +56,11 @@ export default function Hero() {
               ))}
             </div>
             <div className={styles.trustText}>
-              <span className={styles.trustStars}>
+              <span className={styles.trustStars} aria-label="Rated 4.9 out of 5 stars on Google">
                 {Array.from({ length: 5 }).map((_, n) => (
                   <Star key={n} style={{ color: "var(--color-accent)" }} />
                 ))}
-                <strong>4.9</strong>
+                <strong aria-hidden>4.9</strong>
               </span>
               <span className={styles.trustNote}>from 251+ Google reviews</span>
             </div>

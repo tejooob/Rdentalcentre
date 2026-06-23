@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function TreatmentsPage() {
   return (
-    <main>
+    <main id="main-content">
       <PageHero
         eyebrow="What we do"
         title="Treatments for every smile"
