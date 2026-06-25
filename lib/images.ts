@@ -98,29 +98,17 @@ export const images = {
     src: "https://images.pexels.com/photos/4687905/pexels-photo-4687905.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     alt: "A dental implant securing fixed replacement teeth",
   },
-  galleryBefore1: {
-    src: "https://images.pexels.com/photos/12474261/pexels-photo-12474261.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    alt: "Before: crowded, uneven teeth",
+  galleryCase1: {
+    src: "/clinic/results/result-1.jpg",
+    alt: "Before and after at R Dental Centre: chipped, uneven front teeth restored to a straight, white smile",
   },
-  galleryAfter1: {
-    src: "https://images.pexels.com/photos/12474261/pexels-photo-12474261.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    alt: "After: straight, even smile",
+  galleryCase2: {
+    src: "/clinic/results/result-2.jpg",
+    alt: "Before and after at R Dental Centre: stained teeth brightened with professional whitening",
   },
-  galleryBefore2: {
-    src: "https://images.pexels.com/photos/14624608/pexels-photo-14624608.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    alt: "Before: stained, discoloured teeth",
-  },
-  galleryAfter2: {
-    src: "https://images.pexels.com/photos/41208/fun-cold-elegance-face-41208.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    alt: "After: brighter, whiter smile",
-  },
-  galleryBefore3: {
-    src: "https://images.pexels.com/photos/8806087/pexels-photo-8806087.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    alt: "Before: gap between front teeth",
-  },
-  galleryAfter3: {
-    src: "https://images.pexels.com/photos/6812494/pexels-photo-6812494.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    alt: "After: seamless veneer result",
+  galleryCase3: {
+    src: "/clinic/results/result-3.jpg",
+    alt: "Before and after at R Dental Centre: a gap between the front teeth closed for an even smile",
   },
   tourReception: {
     src: "/clinic/clinic-1.jpg",

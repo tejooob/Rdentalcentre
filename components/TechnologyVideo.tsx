@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { technology } from "@/lib/content";
 import Reveal from "./Reveal";
+import LazyVideo from "./LazyVideo";
 import { Check } from "./icons";
 import styles from "./TechnologyVideo.module.css";
 
@@ -29,25 +30,15 @@ export default function TechnologyVideo() {
           {technology.clips.map((clip) => (
             <figure key={clip.src} className={styles.clip}>
               <div className={styles.phone}>
-                <video
+                <LazyVideo
                   className={styles.video}
+                  src={clip.src}
                   poster={clip.poster}
-                  controls
-                  muted
-                  loop
-                  autoPlay
-                  playsInline
-                  preload="metadata"
-                >
-                  <source src={clip.src} type="video/mp4" />
-                  <track
-                    kind="captions"
-                    src={`/captions/${clip.src.split("/").pop()?.replace(".mp4", ".vtt")}`}
-                    srcLang="en"
-                    label="English"
-                    default
-                  />
-                </video>
+                  caption={`/captions/${clip.src
+                    .split("/")
+                    .pop()
+                    ?.replace(".mp4", ".vtt")}`}
+                />
               </div>
               <figcaption className={styles.clipLabel}>{clip.label}</figcaption>
             </figure>

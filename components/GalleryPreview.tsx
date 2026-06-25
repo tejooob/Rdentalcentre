@@ -1,7 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import { gallery } from "@/lib/content";
 import Reveal from "./Reveal";
-import BeforeAfter from "./BeforeAfter";
 import { ArrowRight } from "./icons";
 import styles from "./GalleryPreview.module.css";
 
@@ -15,9 +15,9 @@ export default function GalleryPreview() {
           <p className="eyebrow">Before &amp; after</p>
           <h2 className={styles.title}>Real smiles, real results</h2>
           <p className={styles.text}>
-            Drag the slider to see the difference. Every result is the work of
-            careful planning, not filters, across veneers, aligners, whitening,
-            implants and full smile makeovers.
+            See the difference for yourself. Every result is the work of careful
+            planning, not filters, across smile design, whitening, crowns and
+            full smile makeovers.
           </p>
           <ul className={styles.tags}>
             {gallery.map((g) => (
@@ -32,7 +32,17 @@ export default function GalleryPreview() {
         </Reveal>
 
         <Reveal delay={120} className={styles.sliderWrap}>
-          <BeforeAfter before={item.before} after={item.after} />
+          <div className={styles.frame}>
+            <Image
+              src={item.image.src}
+              alt={item.image.alt}
+              fill
+              sizes="(max-width: 880px) 92vw, 520px"
+              className={styles.frameImg}
+            />
+            <span className={`${styles.baTag} ${styles.baBefore}`}>Before</span>
+            <span className={`${styles.baTag} ${styles.baAfter}`}>After</span>
+          </div>
           <p className={styles.caption}>
             {item.title} · <span>{item.treatment}</span>
           </p>

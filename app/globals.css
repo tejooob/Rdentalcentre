@@ -278,3 +278,13 @@ button {
     transform: none !important;
   }
 }
+
+/* In fullscreen, show videos at their true aspect ratio (vertical clips get
+   pillarbox bars) instead of cropping/stretching to fill a wide screen. */
+video:fullscreen,
+video:-webkit-full-screen {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}

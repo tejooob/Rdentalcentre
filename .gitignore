@@ -28,3 +28,6 @@ next-env.d.ts
 
 # patient before/after photos — held back pending consent (this is a public repo)
 /public/clinic/transformations/
+
+# Original (pre-compression) video backups
+/video-originals/

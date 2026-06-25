@@ -206,10 +206,12 @@ export const videoTestimonials = [
  * Before & After gallery  (stock stand-ins — replace with consented
  * real patient photos)
  * ------------------------------------------------------------------ */
+// Each result is a single combined before/after photo (before on top, after
+// below). Real patient cases from the clinic.
 export const gallery = [
-  { category: "Braces", title: "Crowded teeth, aligned", treatment: "Braces", before: images.galleryBefore1, after: images.galleryAfter1 },
-  { category: "Whitening", title: "Stains lifted, shade brightened", treatment: "Teeth Whitening", before: images.galleryBefore2, after: images.galleryAfter2 },
-  { category: "Smile Design", title: "Gap closed, smile restored", treatment: "Cosmetic Smile Design", before: images.galleryBefore3, after: images.galleryAfter3 },
+  { category: "Smile Design", title: "Chipped & uneven, made even", treatment: "Veneers / smile design", image: images.galleryCase1 },
+  { category: "Whitening", title: "Stains lifted, shade brightened", treatment: "Teeth whitening", image: images.galleryCase2 },
+  { category: "Crowns", title: "Gap closed, smile restored", treatment: "Crowns & smile makeover", image: images.galleryCase3 },
 ];
 
 /* ------------------------------------------------------------------ *

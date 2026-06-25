@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
-import BeforeAfter from "@/components/BeforeAfter";
 import { ArrowRight, WhatsApp } from "@/components/icons";
 import { gallery } from "@/lib/content";
 import { bookWaLink } from "@/lib/site";
@@ -11,7 +11,7 @@ import styles from "./gallery.module.css";
 export const metadata: Metadata = {
   title: "Before & After Gallery",
   description:
-    "Real before-and-after results from R Dental Centre, Nerul — braces, whitening and smile design. Drag the slider to see the difference.",
+    "Real before-and-after results from R Dental Centre, Nerul — smile design, whitening and crowns. See the difference for yourself.",
 };
 
 export default function GalleryPage() {
@@ -20,7 +20,7 @@ export default function GalleryPage() {
       <PageHero
         eyebrow="Before & after"
         title="Smiles we've transformed"
-        subtitle="Drag each slider to compare. These are real treatment outcomes, the result of careful planning, not filters."
+        subtitle="Real treatment outcomes from our clinic in Nerul — the result of careful planning, not filters."
         crumb="Gallery"
       />
 
@@ -29,7 +29,17 @@ export default function GalleryPage() {
           <div className={styles.grid}>
             {gallery.map((item, i) => (
               <Reveal key={item.title} delay={(i % 2) * 100} className={styles.item}>
-                <BeforeAfter before={item.before} after={item.after} />
+                <div className={styles.frame}>
+                  <Image
+                    src={item.image.src}
+                    alt={item.image.alt}
+                    fill
+                    sizes="(max-width: 760px) 92vw, 520px"
+                    className={styles.frameImg}
+                  />
+                  <span className={`${styles.baTag} ${styles.baBefore}`}>Before</span>
+                  <span className={`${styles.baTag} ${styles.baAfter}`}>After</span>
+                </div>
                 <div className={styles.caption}>
                   <span className={styles.cat}>{item.category}</span>
                   <h2 className={styles.title}>{item.title}</h2>
